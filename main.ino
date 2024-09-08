@@ -1,49 +1,20 @@
 
 #include <Servo.h>
 
+int servoPin = 10;
+int servoAngle = 0;
+int delayAmout = 50;
+
+Servo angler;
+
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(13, OUTPUT);
+  // Attach the servo's pin number to the servo object
+  angler.attach(servoPin);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  digitalWrite(13, HIGH);
-  delay(500);
-  digitalWrite(13, LOW);
-  delay(500);
-  digitalWrite(13, HIGH);
-  delay(500);
-  digitalWrite(13, LOW);
-  delay(500);
-  digitalWrite(13, HIGH);
-  delay(500);
-  digitalWrite(13, LOW);
-  delay(500);
-  digitalWrite(13, HIGH);
-  delay(1000);
-  digitalWrite(13, LOW);
-  delay(1000);
-  digitalWrite(13, HIGH);
-  delay(1000);
-  digitalWrite(13, HIGH);
-  delay(1000);
-  digitalWrite(13, LOW);
-  delay(1000);
-  digitalWrite(13, HIGH);
-  delay(1000);
-  digitalWrite(13, LOW);
-  delay(1000);
-  digitalWrite(13, HIGH);
-  delay(500);
-  digitalWrite(13, LOW);
-  delay(500);
-  digitalWrite(13, HIGH);
-  delay(500);
-  digitalWrite(13, LOW);
-  delay(500);
-  digitalWrite(13, HIGH);
-  delay(500);
-  digitalWrite(13, LOW);
-  delay(500);
+  // Set the servo angle
+  angler.write(servoAngle);
+  delay(delayAmout);
+  
 }
