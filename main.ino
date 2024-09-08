@@ -2,8 +2,8 @@
 #include <Servo.h>
 
 int servoPin = 10;
-int servoAngle = 0;
-int delayAmout = 50;
+int servoAngle = 180;
+int delayAmout = 1000;
 
 Servo angler;
 
@@ -15,6 +15,8 @@ void setup() {
 void loop() {
   // Set the servo angle
   angler.write(servoAngle);
+  delay(delayAmout);
+  angler.write(0);
   delay(delayAmout);
   
 }
